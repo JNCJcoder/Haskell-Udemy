@@ -27,3 +27,14 @@ fatorial numero = fatorial(numero - 1) * numero
 fibonacci 0 = 0
 fibonacci 1 = 1
 fibonacci numero = fibonacci(numero - 1) + fibonacci(numero - 2)
+
+-- Guarda
+-- 
+-- Condição Logica, Similar ao Pattern Matching usado acima
+-- Caso o valor seja igual a 0, então guarda(valor) = 0
+-- Caso o valor seja igual a 1, então guarda(valor) = 1
+-- Caso o valor não seja 0 ou 1, então guarda(valor) = 10
+
+guarda valor | (valor == 0) = 0
+             | (valor == 1) = 1
+             | otherwise = 10
