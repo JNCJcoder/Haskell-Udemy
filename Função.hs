@@ -38,3 +38,15 @@ fibonacci numero = fibonacci(numero - 1) + fibonacci(numero - 2)
 guarda valor | (valor == 0) = 0
              | (valor == 1) = 1
              | otherwise = 10
+
+-- Função com 2 Parâmetros Tipados e Variável Anônima
+-- 
+-- Recebe dois valores Bool e retorna um Bool
+-- Variavel Anonima é representada pelo _ (underscore)
+-- Caso um dos parametros seja false, retorna false
+-- Caso todos os parametros sejam true, retorna true
+
+my_and :: Bool -> Bool -> Bool
+my_and False _ = False
+my_and _ False = False
+my_and True True = True
