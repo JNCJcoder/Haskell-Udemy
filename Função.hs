@@ -50,3 +50,26 @@ my_and :: Bool -> Bool -> Bool
 my_and False _ = False
 my_and _ False = False
 my_and True True = True
+
+-- Definindo Novos Tipos
+-- 
+-- Cria novos tipos de dados baseados em outros tipos
+-- Cria um novo elemento do tipo Pessoa 
+-- Três Funções que retornam Nome, Idade ou o Idioma da Pessoa
+
+type Nome = String
+type Idade = Int
+type Idioma = String
+type Pessoa = (Nome, Idade, Idioma)
+
+pessoa :: Pessoa
+pessoa = ("Jorge", 22, "Português")
+
+pessoaNome :: Pessoa -> Nome
+pessoaNome (nome, idade, idioma) = nome
+
+pessoaIdade :: Pessoa -> Idade
+pessoaIdade (nome, idade, idioma) = idade
+
+pessoaIdioma :: Pessoa -> Idioma
+pessoaIdioma (nome, idade, idioma) = idioma
