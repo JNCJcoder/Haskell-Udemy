@@ -73,3 +73,11 @@ pessoaIdade (nome, idade, idioma) = idade
 
 pessoaIdioma :: Pessoa -> Idioma
 pessoaIdioma (nome, idade, idioma) = idioma
+
+-- Função Lambda
+-- 
+-- Funções lambda são feitas usando "\x ->", sendo x o parametro da função
+-- A Função abaixo multiplica o valor passado por ele mesmo
+-- caso x seja 10, então f_lambda(10) = 100
+
+f_lambda = \x -> (x * x)
