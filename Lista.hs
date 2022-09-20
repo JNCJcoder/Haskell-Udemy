@@ -1,5 +1,10 @@
 -- Lista
 
+-- Criação de Lista
+-- 
+-- Cria uma lista com itens de 1 ate 10
+
+[1 .. 10]
 
 -- Tamanho da Lista
 -- 
