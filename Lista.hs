@@ -24,3 +24,9 @@ comparaListas [] _ = False
 comparaListas _ [] = False
 comparaListas (a:b) (c:d) | (a == c) = comparaListas b d
                           | otherwise = False
+
+-- Compreensão de Lista
+-- 
+-- Filtrando numeros par em uma lista
+
+ListaFiltradaPar = [x | x <- [1 .. 10], mod x 2 == 0]
