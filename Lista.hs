@@ -30,3 +30,11 @@ comparaListas (a:b) (c:d) | (a == c) = comparaListas b d
 -- Filtrando numeros par em uma lista
 
 ListaFiltradaPar = [x | x <- [1 .. 10], mod x 2 == 0]
+
+-- Inverter Lista
+-- 
+-- Inverte a lista, caso possua itens dentro
+
+inverterLista :: [a] -> [a]
+inverterLista [] = []
+inverterLista (x:xs) = (inverterLista xs)++[x]
