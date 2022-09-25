@@ -8,3 +8,11 @@
 
 push :: [Int] -> Int -> [Int]
 push pilha x = pilha ++ [x]
+
+-- Top
+-- 
+-- Retorna o valor do topo da pilha
+
+top :: [Int] -> Int
+top [x] = x
+top (x:xs) = top xs
