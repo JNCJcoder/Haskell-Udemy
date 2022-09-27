@@ -25,3 +25,12 @@ pop :: [Int] -> [Int]
 pop [] = error "Pilha vazia"
 pop (x:xs) | (x == (top (x:xs))) = xs
            | otherwise = x:(pop xs)
+
+-- isEmpty
+-- 
+-- Retorna verdadeiro caso a Pilha esteja vazia.
+-- Retorna falso caso tenha algum item na Pilha.
+
+isEmpty :: [Int] -> Bool
+isEmpty [] = True
+isEmpty _ = False
