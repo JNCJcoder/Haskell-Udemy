@@ -37,4 +37,14 @@ ListaFiltradaPar = [x | x <- [1 .. 10], mod x 2 == 0]
 
 inverterLista :: [a] -> [a]
 inverterLista [] = []
-inverterLista (x:xs) = (inverterLista xs)++[x]
+inverterLista (x:xs) = (inverterLista xs) ++ [x]
+
+-- Concatenar Listas
+-- 
+-- Concatena duas listas, caso não seja passado uma segunda lista apenas retorna a Lista
+-- Caso seja passado as listas [1, 2] e [3, 4] retornara [1, 2, 3, 4]
+
+concatenarListas :: [a] -> [a] -> [a]
+concatenarListas [] y = y
+concatenarListas x [] = x
+concatenarListas (x:xs) y = x : concatenarListas xs y
