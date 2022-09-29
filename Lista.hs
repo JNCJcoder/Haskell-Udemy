@@ -48,3 +48,10 @@ concatenarListas :: [a] -> [a] -> [a]
 concatenarListas [] y = y
 concatenarListas x [] = x
 concatenarListas (x:xs) y = x : concatenarListas xs y
+
+-- Gerar Lista Infinita
+-- 
+-- Gera uma lista potencialmente Infinita
+
+gerarListaInfinita :: Int -> [Int]
+gerarLista n = n : gerarLista(n + 1)
