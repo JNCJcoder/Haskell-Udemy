@@ -55,3 +55,11 @@ concatenarListas (x:xs) y = x : concatenarListas xs y
 
 gerarListaInfinita :: Int -> [Int]
 gerarLista n = n : gerarLista(n + 1)
+
+-- Somar Lista
+-- 
+-- Soma todos os elementos da lista e retorna o resultado
+
+somarLista :: [Int] -> Int
+somarLista [] = 0
+somarLista (x:xs) = x + somarLista xs
