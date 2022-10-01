@@ -63,3 +63,13 @@ gerarLista n = n : gerarLista(n + 1)
 somarLista :: [Int] -> Int
 somarLista [] = 0
 somarLista (x:xs) = x + somarLista xs
+
+-- isPrime
+-- 
+-- Retorna os numeros primos
+
+isPrime :: Int -> Bool
+isPrime 1 = False
+isPrime 2 = True
+isPrime n | (length [x | x <-  [2 .. n - 1], mod n x == 0]) > 0 = False
+          | otherwise = True
