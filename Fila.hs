@@ -12,3 +12,11 @@ data Fila t = F [t]
 
 criarFila :: Fila t
 criarFila = F []
+
+-- Inserir Fila
+-- 
+-- 
+
+inserirFila :: Fila t -> t -> Fila t
+inserirFila (F lista) n = F (lista ++ [n])
+
