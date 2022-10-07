@@ -20,3 +20,10 @@ criarFila = F []
 inserirFila :: Fila t -> t -> Fila t
 inserirFila (F lista) n = F (lista ++ [n])
 
+-- Remover Fila
+-- 
+-- 
+
+removerFila :: Fila t -> Fila t
+removerFila (F []) = error "fila vazia"
+removerFila (F (x:xs)) = F xs
