@@ -27,3 +27,11 @@ inserirFila (F lista) n = F (lista ++ [n])
 removerFila :: Fila t -> Fila t
 removerFila (F []) = error "fila vazia"
 removerFila (F (x:xs)) = F xs
+
+-- Frente
+-- 
+-- 
+
+frente :: Fila t -> t
+frente (F []) = error "fila vazia"
+frente (F (x:xs)) = x
