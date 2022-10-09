@@ -35,3 +35,12 @@ removerFila (F (x:xs)) = F xs
 frente :: Fila t -> t
 frente (F []) = error "fila vazia"
 frente (F (x:xs)) = x
+
+-- Fila Vazia
+-- 
+-- Caso a lista esteja vazia retorna True.
+-- Caso a lista possua algum item retorna False.
+
+filaVazia :: Fila t -> Bool
+filaVazia (F []) = True
+filaVazia _ = False
