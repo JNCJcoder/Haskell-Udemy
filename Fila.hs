@@ -44,3 +44,11 @@ frente (F (x:xs)) = x
 filaVazia :: Fila t -> Bool
 filaVazia (F []) = True
 filaVazia _ = False
+
+-- Mostrar Fila
+-- 
+-- Converte a fila em uma Lista
+
+mostrarFila :: Fila t -> [t]
+mostrarFila fila | ((filaVazia fila) == True) = []
+                 | otherwise = (frente fila):(mostrarFila (removerFila fila))
