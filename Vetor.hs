@@ -22,3 +22,9 @@ getArray ! 1 -- Retorna A
 getArray ! 2 -- Retorna B
 getArray ! 3 -- Retorna C
 getArray ! 4 -- Retorna D
+
+-- bounds
+-- 
+-- Retorna os limites do Array
+
+bounds getArray
