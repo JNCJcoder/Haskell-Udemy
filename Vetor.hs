@@ -28,3 +28,9 @@ getArray ! 4 -- Retorna D
 -- Retorna os limites do Array
 
 bounds getArray
+
+-- getMatrix2D
+-- 
+-- Guardando uma matrix de 2 Direções
+
+getMatrix2D = array ((1, 1), (2,2)) [((1, 1), 'A'), ((1, 2), 'B'), ((2, 1), 'C'), ((2, 2), 'D')]
