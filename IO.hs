@@ -12,3 +12,15 @@ pegarCaractere = do
                     caractere <- getChar
                     putStr "O caractere digitado foi: "
                     putChar caractere
+
+-- Somar Numeros 
+-- 
+-- Recebe dois numeros e retorna a soma deles
+
+somarNumeros :: IO Int
+somarNumeros = do
+                    putStr "Digite o primeiro número: "
+                    linha1 <- getLine
+                    putStr "Digite o segundo número: "
+                    linha2 <- getLine
+                    return ((read linha1 :: Int) + (read linha2 :: Int))
