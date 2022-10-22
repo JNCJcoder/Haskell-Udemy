@@ -24,3 +24,16 @@ somarNumeros = do
                     putStr "Digite o segundo número: "
                     linha2 <- getLine
                     return ((read linha1 :: Int) + (read linha2 :: Int))
+
+-- Escrever Arquivo
+-- 
+-- Escreve duas strings no arquivo teste.txt
+
+escreverArquivo :: IO ()
+escreverArquivo = do
+                    arquivo <- openFile "teste.txt" WriteMode
+                    hPutStr arquivo "Escrita no Arquivo\n"
+                    hPutStr arquivo "Escrita novamente no Arquivo"
+                    putStrLn "Escrita realizada com sucesso!"
+                    hFlush arquivo
+                    hClose arquivo
