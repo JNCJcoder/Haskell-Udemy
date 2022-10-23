@@ -37,3 +37,14 @@ escreverArquivo = do
                     putStrLn "Escrita realizada com sucesso!"
                     hFlush arquivo
                     hClose arquivo
+
+-- Ler Arquivo
+-- 
+-- Le o arquivo teste.txt e retorna o seu conteudo no terminal.
+
+lerArquivo :: IO ()
+lerArquivo = do
+                arquivo <- openFile "teste.txt" ReadMode
+                conteudo <- hGetContents arquivo
+                putStrLn conteudo
+                hClose arquivo
