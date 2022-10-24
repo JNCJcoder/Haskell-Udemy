@@ -48,3 +48,12 @@ lerArquivo = do
                 conteudo <- hGetContents arquivo
                 putStrLn conteudo
                 hClose arquivo
+
+-- Escrever Arquivo
+-- 
+-- Escreve uma strings no arquivo teste.txt diretamente
+
+escreverArquivoDiretamente :: IO ()
+escreverArquivoDiretamente = do
+                                writeFile "teste.txt" "Aprendendo Haskell"
+                                putStrLn "Escrita realizada com sucesso!"
