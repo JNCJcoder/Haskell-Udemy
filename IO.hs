@@ -38,6 +38,18 @@ escreverArquivo = do
                     hFlush arquivo
                     hClose arquivo
 
+-- Anexar Arquivo
+-- 
+-- Escreve uma string no final do arquivo
+
+anexarArquivo :: IO ()
+anexarArquivo = do
+                    arquivo <- openFile "teste.txt" AppendMode
+                    hPutStr arquivo "Anexo no Arquivo\n"
+                    putStrLn "Anexo realizada com sucesso!"
+                    hFlush arquivo
+                    hClose arquivo
+
 -- Ler Arquivo
 -- 
 -- Le o arquivo teste.txt e retorna o seu conteudo no terminal.
