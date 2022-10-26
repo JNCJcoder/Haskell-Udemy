@@ -69,3 +69,12 @@ escreverArquivoDiretamente :: IO ()
 escreverArquivoDiretamente = do
                                 writeFile "teste.txt" "Aprendendo Haskell"
                                 putStrLn "Escrita realizada com sucesso!"
+
+-- Ler Arquivo Diretamente
+-- 
+-- Le o arquivo teste.txt diretamente e retorna o seu conteudo no terminal.
+
+lerArquivoDiretamente :: IO ()
+lerArquivoDiretamente = do 
+                            conteudo <- readFile "teste.txt"
+                            putStrLn conteudo
