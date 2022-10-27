@@ -78,3 +78,12 @@ lerArquivoDiretamente :: IO ()
 lerArquivoDiretamente = do 
                             conteudo <- readFile "teste.txt"
                             putStrLn conteudo
+
+-- Anexar Arquivo Diretamente
+-- 
+-- Adiciona uma string diretamente no arquivo teste.txt
+
+anexarArquivoDiretamente :: IO ()
+anexarArquivoDiretamente = do
+                                appendFile "teste.txt" "\nHaskell é legal"
+                                putStrLn "Conteudo anexado com sucesso!"
