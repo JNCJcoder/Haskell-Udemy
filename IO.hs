@@ -87,3 +87,22 @@ anexarArquivoDiretamente :: IO ()
 anexarArquivoDiretamente = do
                                 appendFile "teste.txt" "\nHaskell é legal"
                                 putStrLn "Conteudo anexado com sucesso!"
+
+-- Fatorial
+-- 
+-- retorna o fatorial do numero passado
+
+fatorial :: Int -> Int
+fatorial 0 = 1
+fatorial numero = numero * fatorial (numero - 1)
+
+-- Fatorial IO
+-- 
+-- retorna o fatorial do numero passado para o programa
+
+fatorialIO :: IO ()
+fatorialIO = do
+                putStr "Digite um número: "
+                numero <- getLine
+                putStrLn "O resultado é: "
+                print (fatorial (read numero))
